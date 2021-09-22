@@ -84,3 +84,10 @@ header .logo {
   user-select: none;
   mix-blend-mode: screen;
 }
+.main h2 {
+  position: relative;
+  z-index: 3;
+  color: var(--white);
+  font-size: 16vw;
+  text-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
