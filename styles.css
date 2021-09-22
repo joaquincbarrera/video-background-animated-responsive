@@ -10,6 +10,10 @@
   --black: #333;
   --white: #fff;
 }
+.dark {
+  --black: #fff;
+  --white: #333;
+}
 header {
   position: absolute;
   display: flex;
@@ -84,10 +88,14 @@ header .logo {
   user-select: none;
   mix-blend-mode: screen;
 }
+.dark .mask {
+  filter: invert(1);
+  mix-blend-mode: multiply;
+}
 .main h2 {
   position: relative;
   z-index: 3;
-  color: var(--white);
+  color: #fff;
   font-size: 16vw;
   text-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
@@ -124,4 +132,30 @@ header .logo {
 
 .navigation.active {
   left: 0;
+}
+
+.copyrightText {
+  position: absolute;
+  left: 100px;
+  bottom: 40px;
+  z-index: 4;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--black);
+}
+.sci {
+  position: absolute;
+  right: 100px;
+  bottom: 40px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.75em;
 }
